@@ -1,2 +1,2 @@
 # Full Cycle - Docker
-Curso de Docker Full Cycle
+Curso Docker Full Cycle

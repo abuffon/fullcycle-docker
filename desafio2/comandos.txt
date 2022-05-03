@@ -1,0 +1,8 @@
+Rodar app node
+------------------
+mkdir /usr/src/app
+cd /usr/src/app
+copy index.js .
+npm init -y
+npm install express
+node index.js

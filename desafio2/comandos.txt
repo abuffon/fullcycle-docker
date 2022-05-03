@@ -6,3 +6,11 @@ copy index.js .
 npm init -y
 npm install express
 node index.js
+
+Rodar mysql
+------------------
+docker run --name db -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=nodedb -v scripts:/docker-entrypoint-initdb.d -d mysql:8.0.29
+mysql -proot
+use nodedb;
+create table people(id int not null auto_increment, name varchar(255), primary key(id));
+insert into people(name) values('Anderson');

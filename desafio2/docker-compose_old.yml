@@ -7,8 +7,7 @@ services:
       context: nginx
     container_name: nginx
     networks:
-      - external-network
-      - nginxapp-network
+      - node-network
     tty: true
     ports:
       - 8080:80
@@ -22,8 +21,7 @@ services:
     entrypoint: dockerize -wait tcp://db:3306 -timeout 20s docker-entrypoint.sh
     command: node index.js
     networks:
-      - nginxapp-network
-      - appdb-network
+      - node-network
     tty: true
     depends_on:
       - db
@@ -40,12 +38,8 @@ services:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=nodedb
     networks:
-      - appdb-network
+      - node-network
 
 networks:
-  external-network:
-    driver: bridge
-  nginxapp-network:
-    driver: bridge
-  appdb-network:
+  node-network:
     driver: bridge

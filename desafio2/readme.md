@@ -1,9 +1,9 @@
 # Desafio 2 #
  * Clonar o repositório git com o comando
  ```
- https://github.com/abuffon/fullcycle-docker.git
+ git clone https://github.com/abuffon/fullcycle-docker.git
  ```
- * Entre no diretório desafio2
+ * Entre no diretório /fullcycle-docker/desafio2
  * Rode o comando 
  ```
  docker-compose up -d
